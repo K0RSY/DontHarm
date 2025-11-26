@@ -47,7 +47,10 @@ class AuthorisationFields(ft.Row):
 
             if self.login_field.value == LOGIN and self.password_field.value == PASSWORD and self.is_human:
                 self.set_humanity()
-                self.window.go("/")
+                if ROLE == "laboratory_assistant":
+                    self.window.go("/laboratory_assistant")
+                else:
+                    self.window.go("/others")
             else:
                 self.destroy_humanity()
                 self.check_on_humanity()
