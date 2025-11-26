@@ -27,7 +27,7 @@ class Timer(ft.Text):
     def tick(self):
         self.seconds -= 1
 
-        if self.seconds <= LABORATORY_ASSISTANT_SESSION_WARNING_SECONDS:
+        if self.seconds == LABORATORY_ASSISTANT_SESSION_WARNING_SECONDS:
             self.message = "Скоро время закончится!"
 
         self.update()
