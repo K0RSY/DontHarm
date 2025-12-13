@@ -13,6 +13,6 @@ TIME_MASK = "%Y-%m-%d %H:%M:%S"
 LOGIN = "ivan"
 PASSWORD = "123"
 ROLE = ""
-# ROLE = "laboratory_assistant"
+ROLE = "laboratory_assistant"
 
 USER_DATA_FILE = "user_data.json"
