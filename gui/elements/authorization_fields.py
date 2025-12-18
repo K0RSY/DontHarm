@@ -3,6 +3,7 @@ from settings import *
 import gui.elements.captcha
 import json
 import datetime
+from req.req import *
 
 class AuthorisationFields(ft.Row):
     def __init__(self, window):
@@ -46,7 +47,7 @@ class AuthorisationFields(ft.Row):
             self.warning.visible = False
             self.window.update()
 
-            if self.login_field.value == LOGIN and self.password_field.value == PASSWORD and self.is_human:
+            if Req.generate_token(self.login_field.value, self.password_field.value) and self.is_human:
                 self.set_humanity()
                 if ROLE == "laboratory_assistant":
                     self.window.go("/laboratory_assistant")
