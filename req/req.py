@@ -17,7 +17,8 @@ class Req():
     def send_post_request(path, data):
         try:
             return requests.post(API_URL + path, data=json.dumps(data), headers={'Authorization': f'Bearer {Req.token}'}).json()
-        except:
+        except Exception as e:
+            print(e)
             return None
     
     @staticmethod

@@ -39,6 +39,11 @@ class Clients(Base):
     surname: Mapped[Optional[str]] = mapped_column(String(100))
     name: Mapped[Optional[str]] = mapped_column(String(100))
     patronymic: Mapped[Optional[str]] = mapped_column(String(100))
+    dateOfBirth: Mapped[Optional[str]] = mapped_column(Date())
+    passportSeria: Mapped[Optional[str]] = mapped_column(String(100))
+    passportNumber: Mapped[Optional[str]] = mapped_column(String(100))
+    phone: Mapped[Optional[str]] = mapped_column(String(100))
+    email: Mapped[Optional[str]] = mapped_column(String(100))
     
 class Services(Base):
     __tablename__ = 'services'
