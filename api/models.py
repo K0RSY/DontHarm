@@ -1,6 +1,6 @@
 from typing import Optional
 
-from sqlalchemy import BINARY, Date, Integer, String, Double, DateTime
+from sqlalchemy import BINARY, Date, Integer, String, Double, DateTime, DECIMAL
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 import datetime
 from pydantic import BaseModel
@@ -50,6 +50,7 @@ class Services(Base):
 
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     name: Mapped[Optional[str]] = mapped_column(String(100))
+    cost: Mapped[Optional[float]] = mapped_column(DECIMAL(10, 2))
     
 class Orders(Base):
     __tablename__ = 'orders'

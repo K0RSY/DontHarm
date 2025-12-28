@@ -13,3 +13,5 @@ TIME_MASK = "%Y-%m-%d %H:%M:%S"
 ROLE = "laboratory_assistant"
 
 USER_DATA_FILE = "user_data.json"
+
+ORDER_DATA_EXPORT_FILE_NAME = "latest_orders"
