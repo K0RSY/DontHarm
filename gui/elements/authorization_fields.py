@@ -11,7 +11,7 @@ class AuthorisationFields(ft.Row):
 
         self.login_field = ft.TextField(border_color=COLOR_TEXT, color=COLOR_TEXT, label="Логин")
         self.password_field = ft.TextField(border_color=COLOR_TEXT, color=COLOR_TEXT, label="Пароль", password=True)
-        self.log_in_button = ft.Button("Войти", on_click=self.log_in, expand=True, bgcolor=COLOR_FG, color=COLOR_TEXT)
+        self.log_in_button = ft.Button("Войти", on_click=self.log_in, bgcolor=COLOR_FG, color=COLOR_TEXT)
         self.captcha = gui.elements.captcha.Captcha(self.window, on_change=self.captcha_change)
         self.warning = ft.Text("Подождите перед тем как войти снова!", color=COLOR_TEXT, visible=False)
         

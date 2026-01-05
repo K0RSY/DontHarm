@@ -58,3 +58,4 @@ class Orders(Base):
     id: Mapped[int] = mapped_column(Integer, primary_key=True)
     serviceId: Mapped[int] = mapped_column(Integer)
     clientId: Mapped[int] = mapped_column(Integer)
+    date: Mapped[str] = mapped_column(Date())

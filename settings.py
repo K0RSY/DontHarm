@@ -10,8 +10,10 @@ LABORATORY_ASSISTANT_SESSION_WARNING_SECONDS = 30
 TIMEOUT_DURATION = 10
 TIME_MASK = "%Y-%m-%d %H:%M:%S"
 
-ROLE = "laboratory_assistant"
+ROLE = "laboratory_assistants"
 
 USER_DATA_FILE = "user_data.json"
 
 ORDER_DATA_EXPORT_FILE_NAME = "latest_orders"
+
+CHECK_FILE_NAME = "check"

@@ -53,7 +53,7 @@ class QRCodeScanner(ft.Row):
         )
 
         self.select_file_button = ft.Button("Загрузить из QR-кода...", on_click=self.select_file, expand=True, bgcolor=COLOR_FG, color=COLOR_TEXT)
-        self.submit_button = ft.Button("Отправить", on_click=self.submit, expand=True, bgcolor=COLOR_FG, color=COLOR_TEXT)
+        self.submit_button = ft.Button("Отправить", on_click=self.submit, bgcolor=COLOR_FG, color=COLOR_TEXT)
         self.file_selector = ft.FilePicker(on_result=self.show_result)
         self.warning = ft.Text("", color=COLOR_TEXT)
         self.add_user_button = ft.Button("Доавить пользователя...", on_click=self.add_user, expand=True, bgcolor=COLOR_FG, color=COLOR_TEXT, visible=False)
@@ -160,7 +160,8 @@ class QRCodeScanner(ft.Row):
                 
                 data = {
                     "serviceId": i[0],
-                    "clientId": client_id
+                    "clientId": client_id,
+                    "date": datetime.datetime.now().strftime("%Y-%m-%d")
                 }
 
                 for _ in range(int(i[1])):
